@@ -1,0 +1,34 @@
+Algoritmo Examen1LyA
+	//Algoritmo el cual nos permitirá definir la edad del usuario
+	Definir nom Como Caracter;
+	Definir dia,año,mes,dat1,dat2,dat3,edad Como Entero;
+	
+	//Ingreso de los datos necesarios para el algoritmo
+	Escribir "Ingrese su fecha de nacimiento en el siguiente orden (nombre y apellidos, dia, mes, año)"
+	Leer nom,dat1,dat2,dat3;
+	
+	Escribir "ingrese la fecha de hoy en el siguiente orden (dia,mes,año)"
+	Leer dia,mes,año;
+	
+	//Operación que brinda los años que han transcurrido
+	edad = año-dat3;
+	
+	//Algoritmo que permite saber la edad exacta según los meses y los días actuales
+	si dat2 > mes Entonces
+		edad = edad-1;
+	SiNo
+		si	dat2 = mes Entonces
+			si	dat1 > dia Entonces
+				edad = edad-1;
+			SiNo
+				si	dat1 = dia Entonces
+					
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	
+	//Parte del algoritmo la cual muestra los resultados obtenidos
+	Imprimir "Usted es ",nom,", tiene ",edad," años."
+	
+FinAlgoritmo
